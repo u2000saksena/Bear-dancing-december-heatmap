@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e6ddf2602b4738dea757a65149d7b8ce {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="position:fixed; bottom:50px; left:50px; width:180px; 
+background:white; border:2px solid grey; z-index:9999; padding:10px">
+<b>🐻 Bear Performances</b><br>
+🔴 Click red pins for village/bear/suspect details
+</div>
+    
+            <div class="folium-map" id="map_e6ddf2602b4738dea757a65149d7b8ce" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_e6ddf2602b4738dea757a65149d7b8ce = L.map(
+                "map_e6ddf2602b4738dea757a65149d7b8ce",
+                {
+                    center: [24.5, 86.8],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e998ac84e80276b777dbfa8392c862fc = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_e998ac84e80276b777dbfa8392c862fc.addTo(map_e6ddf2602b4738dea757a65149d7b8ce);
+        
+    
+            var marker_0d19845dea5052e0e15cf8dcc0477a6e = L.marker(
+                [24.241552, 86.75556],
+                {
+}
+            ).addTo(map_e6ddf2602b4738dea757a65149d7b8ce);
+        
+    
+            var icon_c113e33ffec527b07fc3307855447bf4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_591931765dfc0d0954f31018cfd83bdb = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d593f8fdd02a5012a7d392ff5cf13ab5 = $(`<div id="html_d593f8fdd02a5012a7d392ff5cf13ab5" style="width: 100.0%; height: 100.0%;">     <b>Santali, Jharkhand 24.241552, 86.755560</b><br>     🐻 <b>Bear:</b> F<br>     👤 <b>Suspect:</b> A<br>     📅 <b>Date:</b> 27/11/25<br>     <a href="https://www.youtube.com/watch?v=eVj0A6x7qaE" target="_blank">🎥 Video</a>     </div>`)[0];
+                popup_591931765dfc0d0954f31018cfd83bdb.setContent(html_d593f8fdd02a5012a7d392ff5cf13ab5);
+            
+        
+
+        marker_0d19845dea5052e0e15cf8dcc0477a6e.bindPopup(popup_591931765dfc0d0954f31018cfd83bdb)
+        ;
+
+        
+    
+    
+            marker_0d19845dea5052e0e15cf8dcc0477a6e.bindTooltip(
+                `<div>
+                     Santali, Jharkhand 24.241552, 86.755560
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0d19845dea5052e0e15cf8dcc0477a6e.setIcon(icon_c113e33ffec527b07fc3307855447bf4);
+            
+    
+            var marker_1d72bed99de8d996a7dd4fd519b6b89c = L.marker(
+                [24.645072, 87.682542],
+                {
+}
+            ).addTo(map_e6ddf2602b4738dea757a65149d7b8ce);
+        
+    
+            var icon_f56ca9d0bca7842828c7d30676513309 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4c04d9a5a525d8d75ed3868df717ab58 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_5e759e5300389b7727c00c0a3d3630d3 = $(`<div id="html_5e759e5300389b7727c00c0a3d3630d3" style="width: 100.0%; height: 100.0%;">     <b>Darajmath, Jharkhand  24.645072, 87.682542</b><br>     🐻 <b>Bear:</b> A<br>     👤 <b>Suspect:</b> A<br>     📅 <b>Date:</b> 8/12/25<br>     <a href="https://www.youtube.com/shorts/utt5PSiEujs" target="_blank">🎥 Video</a>     </div>`)[0];
+                popup_4c04d9a5a525d8d75ed3868df717ab58.setContent(html_5e759e5300389b7727c00c0a3d3630d3);
+            
+        
+
+        marker_1d72bed99de8d996a7dd4fd519b6b89c.bindPopup(popup_4c04d9a5a525d8d75ed3868df717ab58)
+        ;
+
+        
+    
+    
+            marker_1d72bed99de8d996a7dd4fd519b6b89c.bindTooltip(
+                `<div>
+                     Darajmath, Jharkhand 
+24.645072, 87.682542
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1d72bed99de8d996a7dd4fd519b6b89c.setIcon(icon_f56ca9d0bca7842828c7d30676513309);
+            
+    
+            var marker_b6b6ccd7e30f1f78a9cdee828ab401bc = L.marker(
+                [24.662381, 87.357497],
+                {
+}
+            ).addTo(map_e6ddf2602b4738dea757a65149d7b8ce);
+        
+    
+            var icon_fe27c7c70812b48d215b4e0fa1034d76 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8a05f6632056af68186e1d6e76a18d25 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_5c99f3b81c18222c08fa31a5e913557d = $(`<div id="html_5c99f3b81c18222c08fa31a5e913557d" style="width: 100.0%; height: 100.0%;">     <b>Karamtola, Jharkhand 24.662381, 87.357497</b><br>     🐻 <b>Bear:</b> B<br>     👤 <b>Suspect:</b> B<br>     📅 <b>Date:</b> 12/12/25<br>     <a href="https://www.youtube.com/shorts/p9CKTV47ElY" target="_blank">🎥 Video</a>     </div>`)[0];
+                popup_8a05f6632056af68186e1d6e76a18d25.setContent(html_5c99f3b81c18222c08fa31a5e913557d);
+            
+        
+
+        marker_b6b6ccd7e30f1f78a9cdee828ab401bc.bindPopup(popup_8a05f6632056af68186e1d6e76a18d25)
+        ;
+
+        
+    
+    
+            marker_b6b6ccd7e30f1f78a9cdee828ab401bc.bindTooltip(
+                `<div>
+                     Karamtola, Jharkhand
+24.662381, 87.357497
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b6b6ccd7e30f1f78a9cdee828ab401bc.setIcon(icon_fe27c7c70812b48d215b4e0fa1034d76);
+            
+    
+            var marker_3bc1d7603039ebbd1f43783afab8fa2d = L.marker(
+                [24.407426, 86.171317],
+                {
+}
+            ).addTo(map_e6ddf2602b4738dea757a65149d7b8ce);
+        
+    
+            var icon_ff61e855603c0350217be6301ce1b9a1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7a031540ea99faf471f6c50edbbc82c2 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e4bc42aa61169fb7ac01800f40091857 = $(`<div id="html_e4bc42aa61169fb7ac01800f40091857" style="width: 100.0%; height: 100.0%;">     <b>Pargodih (Nr Jamua), Jharkhand 24.407426, 86.171317</b><br>     🐻 <b>Bear:</b> C<br>     👤 <b>Suspect:</b> C<br>     📅 <b>Date:</b> 22/11/25 -22/12/25<br>     <a href="https://youtube.com/shorts/3DkvtXCt-Ck?si=CecwO51jPsrs9LjJ" target="_blank">🎥 Video</a>     </div>`)[0];
+                popup_7a031540ea99faf471f6c50edbbc82c2.setContent(html_e4bc42aa61169fb7ac01800f40091857);
+            
+        
+
+        marker_3bc1d7603039ebbd1f43783afab8fa2d.bindPopup(popup_7a031540ea99faf471f6c50edbbc82c2)
+        ;
+
+        
+    
+    
+            marker_3bc1d7603039ebbd1f43783afab8fa2d.bindTooltip(
+                `<div>
+                     Pargodih (Nr Jamua), Jharkhand
+24.407426, 86.171317
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3bc1d7603039ebbd1f43783afab8fa2d.setIcon(icon_ff61e855603c0350217be6301ce1b9a1);
+            
+    
+            var marker_2d4a61c8cd794890933005940b2d29f5 = L.marker(
+                [24.238904, 87.469315],
+                {
+}
+            ).addTo(map_e6ddf2602b4738dea757a65149d7b8ce);
+        
+    
+            var icon_3c7b4a73dc03ab7999bf7b71da7ef150 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_30bf087e50316ba3def1a2379a7496fd = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_c87a49a6109c5b9a44d8d150f03559ee = $(`<div id="html_c87a49a6109c5b9a44d8d150f03559ee" style="width: 100.0%; height: 100.0%;">     <b>Dumka shikaripara, Jharkhand 24.238904, 87.469315</b><br>     🐻 <b>Bear:</b> B<br>     👤 <b>Suspect:</b> D<br>     📅 <b>Date:</b> 23/12/25<br>     <a href="https://www.facebook.com/reel/25737329119226622" target="_blank">🎥 Video</a>     </div>`)[0];
+                popup_30bf087e50316ba3def1a2379a7496fd.setContent(html_c87a49a6109c5b9a44d8d150f03559ee);
+            
+        
+
+        marker_2d4a61c8cd794890933005940b2d29f5.bindPopup(popup_30bf087e50316ba3def1a2379a7496fd)
+        ;
+
+        
+    
+    
+            marker_2d4a61c8cd794890933005940b2d29f5.bindTooltip(
+                `<div>
+                     Dumka shikaripara, Jharkhand
+24.238904, 87.469315
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2d4a61c8cd794890933005940b2d29f5.setIcon(icon_3c7b4a73dc03ab7999bf7b71da7ef150);
+            
+    
+            var marker_1831e8356d2619027d98c972b9b67998 = L.marker(
+                [24.280129, 87.383645],
+                {
+}
+            ).addTo(map_e6ddf2602b4738dea757a65149d7b8ce);
+        
+    
+            var icon_999cf713037251eecdf14b587c564a87 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_36a6c3efdf9ed04d80c2c5d2a56797da = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_8d84634eb811c6965feab648956ac7c1 = $(`<div id="html_8d84634eb811c6965feab648956ac7c1" style="width: 100.0%; height: 100.0%;">     <b>Dumka Sidpahari, Jharkhand 24.280129, 87.383645</b><br>     🐻 <b>Bear:</b> B<br>     👤 <b>Suspect:</b> E<br>     📅 <b>Date:</b> 25/12/25<br>     <a href="https://www.facebook.com/reel/1929716834625578" target="_blank">🎥 Video</a>     </div>`)[0];
+                popup_36a6c3efdf9ed04d80c2c5d2a56797da.setContent(html_8d84634eb811c6965feab648956ac7c1);
+            
+        
+
+        marker_1831e8356d2619027d98c972b9b67998.bindPopup(popup_36a6c3efdf9ed04d80c2c5d2a56797da)
+        ;
+
+        
+    
+    
+            marker_1831e8356d2619027d98c972b9b67998.bindTooltip(
+                `<div>
+                     Dumka Sidpahari, Jharkhand 24.280129, 87.383645
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1831e8356d2619027d98c972b9b67998.setIcon(icon_999cf713037251eecdf14b587c564a87);
+            
+    
+            var marker_b939ea77e53d30bea3bb3a21a65778a3 = L.marker(
+                [25.987082, 87.357506],
+                {
+}
+            ).addTo(map_e6ddf2602b4738dea757a65149d7b8ce);
+        
+    
+            var icon_e621087c29a07adca7be2c999faed69f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_11c2bdabfdebcaf68be3670128ef8967 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_829c6e68585672c668acf490354ac88c = $(`<div id="html_829c6e68585672c668acf490354ac88c" style="width: 100.0%; height: 100.0%;">     <b>Bousi Barathad, Bihar  25.987082, 87.357506</b><br>     🐻 <b>Bear:</b> D<br>     👤 <b>Suspect:</b> F<br>     📅 <b>Date:</b> 26/12/25<br>     <a href="https://www.facebook.com/reel/871581758590721" target="_blank">🎥 Video</a>     </div>`)[0];
+                popup_11c2bdabfdebcaf68be3670128ef8967.setContent(html_829c6e68585672c668acf490354ac88c);
+            
+        
+
+        marker_b939ea77e53d30bea3bb3a21a65778a3.bindPopup(popup_11c2bdabfdebcaf68be3670128ef8967)
+        ;
+
+        
+    
+    
+            marker_b939ea77e53d30bea3bb3a21a65778a3.bindTooltip(
+                `<div>
+                     Bousi Barathad, Bihar 
+25.987082, 87.357506
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b939ea77e53d30bea3bb3a21a65778a3.setIcon(icon_e621087c29a07adca7be2c999faed69f);
+            
+    
+            var marker_f74f317d13f1e647716b47fa42d79136 = L.marker(
+                [24.322344, 86.598125],
+                {
+}
+            ).addTo(map_e6ddf2602b4738dea757a65149d7b8ce);
+        
+    
+            var icon_aaf2ced443372ce501aa2bac2d954d08 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_44dae4350b51156f0bf0d6bc061e6b76 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_9bc1130a5fbb95f16cd49073729dd170 = $(`<div id="html_9bc1130a5fbb95f16cd49073729dd170" style="width: 100.0%; height: 100.0%;">     <b>Domohani, Jharkhand  24.322344, 86.598125</b><br>     🐻 <b>Bear:</b> B<br>     👤 <b>Suspect:</b> G<br>     📅 <b>Date:</b> 27/12/25<br>     <a href="https://www.facebook.com/reel/1583644142836701" target="_blank">🎥 Video</a>     </div>`)[0];
+                popup_44dae4350b51156f0bf0d6bc061e6b76.setContent(html_9bc1130a5fbb95f16cd49073729dd170);
+            
+        
+
+        marker_f74f317d13f1e647716b47fa42d79136.bindPopup(popup_44dae4350b51156f0bf0d6bc061e6b76)
+        ;
+
+        
+    
+    
+            marker_f74f317d13f1e647716b47fa42d79136.bindTooltip(
+                `<div>
+                     Domohani, Jharkhand 
+24.322344, 86.598125
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f74f317d13f1e647716b47fa42d79136.setIcon(icon_aaf2ced443372ce501aa2bac2d954d08);
+            
+    
+            var marker_ea96cea2d412912e98a8ceaa38f469c7 = L.marker(
+                [24.345201, 86.637731],
+                {
+}
+            ).addTo(map_e6ddf2602b4738dea757a65149d7b8ce);
+        
+    
+            var icon_3560ba4e5bc99147ef0130468716370b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d70fcbf4408bef0b0536eaeb0aeff5e9 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_76f346c5c066672c5ed102c455f80a15 = $(`<div id="html_76f346c5c066672c5ed102c455f80a15" style="width: 100.0%; height: 100.0%;">     <b>Nawadih, Jharkhand  24.345201, 86.637731</b><br>     🐻 <b>Bear:</b> B<br>     👤 <b>Suspect:</b> H<br>     📅 <b>Date:</b> 28/12/25<br>     <a href="https://www.youtube.com/shorts/rpBnameq6Bg" target="_blank">🎥 Video</a>     </div>`)[0];
+                popup_d70fcbf4408bef0b0536eaeb0aeff5e9.setContent(html_76f346c5c066672c5ed102c455f80a15);
+            
+        
+
+        marker_ea96cea2d412912e98a8ceaa38f469c7.bindPopup(popup_d70fcbf4408bef0b0536eaeb0aeff5e9)
+        ;
+
+        
+    
+    
+            marker_ea96cea2d412912e98a8ceaa38f469c7.bindTooltip(
+                `<div>
+                     Nawadih, Jharkhand 
+24.345201, 86.637731
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ea96cea2d412912e98a8ceaa38f469c7.setIcon(icon_3560ba4e5bc99147ef0130468716370b);
+            
+    
+            var marker_1a9cc650114f6bc918841d51cc9eee49 = L.marker(
+                [25.906504, 87.477227],
+                {
+}
+            ).addTo(map_e6ddf2602b4738dea757a65149d7b8ce);
+        
+    
+            var icon_79031b236073242755a055efcea5356d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3ca7f9937751bfe83138475a6cf74da0 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_4faaaf3a49cf9bce4197e422fae1d9f3 = $(`<div id="html_4faaaf3a49cf9bce4197e422fae1d9f3" style="width: 100.0%; height: 100.0%;">     <b>Jiyaganj Pipra Tola (Nr Purnia), Bihar 25.906504, 87.477227</b><br>     🐻 <b>Bear:</b> E<br>     👤 <b>Suspect:</b> I<br>     📅 <b>Date:</b> 29/12/25<br>     <a href="https://www.facebook.com/share/r/1KRrFuJiCi/" target="_blank">🎥 Video</a>     </div>`)[0];
+                popup_3ca7f9937751bfe83138475a6cf74da0.setContent(html_4faaaf3a49cf9bce4197e422fae1d9f3);
+            
+        
+
+        marker_1a9cc650114f6bc918841d51cc9eee49.bindPopup(popup_3ca7f9937751bfe83138475a6cf74da0)
+        ;
+
+        
+    
+    
+            marker_1a9cc650114f6bc918841d51cc9eee49.bindTooltip(
+                `<div>
+                     Jiyaganj Pipra Tola (Nr Purnia), Bihar
+25.906504, 87.477227
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1a9cc650114f6bc918841d51cc9eee49.setIcon(icon_79031b236073242755a055efcea5356d);
+            
+    
+            var marker_c277ab3bb6c9036c0f49ad6df88bc145 = L.marker(
+                [24.519219, 87.067194],
+                {
+}
+            ).addTo(map_e6ddf2602b4738dea757a65149d7b8ce);
+        
+    
+            var icon_9e5281fc6bc4bb21f46e849e5183cdef = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_58bb7680388d1474a9730bd814fce447 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_178e4ffa33b0e2e700b10876bc15b668 = $(`<div id="html_178e4ffa33b0e2e700b10876bc15b668" style="width: 100.0%; height: 100.0%;">     <b>Bhalua (24.519219, 87.067194) and Barmaniya (24.497274, 87.018018) (Nr Sariyahatt), Jharkhand</b><br>     🐻 <b>Bear:</b> D<br>     👤 <b>Suspect:</b> F<br>     📅 <b>Date:</b> 12/01/26<br>     <a href="https://www.instagram.com/reels/DTehgpogZQu/" target="_blank">🎥 Video</a>     </div>`)[0];
+                popup_58bb7680388d1474a9730bd814fce447.setContent(html_178e4ffa33b0e2e700b10876bc15b668);
+            
+        
+
+        marker_c277ab3bb6c9036c0f49ad6df88bc145.bindPopup(popup_58bb7680388d1474a9730bd814fce447)
+        ;
+
+        
+    
+    
+            marker_c277ab3bb6c9036c0f49ad6df88bc145.bindTooltip(
+                `<div>
+                     Bhalua (24.519219, 87.067194) and Barmaniya (24.497274, 87.018018)
+(Nr Sariyahatt), Jharkhand
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c277ab3bb6c9036c0f49ad6df88bc145.setIcon(icon_9e5281fc6bc4bb21f46e849e5183cdef);
+            
+    
+            var marker_e780337d6ac37c593e5b8117f3dc4f73 = L.marker(
+                [24.768546, 87.123649],
+                {
+}
+            ).addTo(map_e6ddf2602b4738dea757a65149d7b8ce);
+        
+    
+            var icon_17c0f2dbe41ea87071c61722838378b4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_78254fd401620dfa5c647c21236110c4 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3aa1ca9fa9b8085ded5ed034d6484000 = $(`<div id="html_3aa1ca9fa9b8085ded5ed034d6484000" style="width: 100.0%; height: 100.0%;">     <b>Jalgo, (Nr Poreyahat) Jharkhand 24.768546, 87.123649</b><br>     🐻 <b>Bear:</b> B<br>     👤 <b>Suspect:</b> B<br>     📅 <b>Date:</b> 13/01/26<br>     <a href="https://www.facebook.com/share/r/1EDKQeiGLR/" target="_blank">🎥 Video</a>     </div>`)[0];
+                popup_78254fd401620dfa5c647c21236110c4.setContent(html_3aa1ca9fa9b8085ded5ed034d6484000);
+            
+        
+
+        marker_e780337d6ac37c593e5b8117f3dc4f73.bindPopup(popup_78254fd401620dfa5c647c21236110c4)
+        ;
+
+        
+    
+    
+            marker_e780337d6ac37c593e5b8117f3dc4f73.bindTooltip(
+                `<div>
+                     Jalgo, (Nr Poreyahat) Jharkhand
+24.768546, 87.123649
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e780337d6ac37c593e5b8117f3dc4f73.setIcon(icon_17c0f2dbe41ea87071c61722838378b4);
+            
+    
+            var marker_57d6ae8c86db74f61cfce69699a5be53 = L.marker(
+                [24.589686, 87.082855],
+                {
+}
+            ).addTo(map_e6ddf2602b4738dea757a65149d7b8ce);
+        
+    
+            var icon_bdf5dc64ccd3026b0a6a36b7103b3124 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_01a12354d735b98f0c4565ab10c4693c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b9cec7ff632eb142578e74763e94b7d4 = $(`<div id="html_b9cec7ff632eb142578e74763e94b7d4" style="width: 100.0%; height: 100.0%;">     <b>Parkheta, Jharkhand 24.589686, 87.082855</b><br>     🐻 <b>Bear:</b> C<br>     👤 <b>Suspect:</b> H<br>     📅 <b>Date:</b> 14/01/26<br>     <a href="https://www.facebook.com/share/r/1DRncuowE6/" target="_blank">🎥 Video</a>     </div>`)[0];
+                popup_01a12354d735b98f0c4565ab10c4693c.setContent(html_b9cec7ff632eb142578e74763e94b7d4);
+            
+        
+
+        marker_57d6ae8c86db74f61cfce69699a5be53.bindPopup(popup_01a12354d735b98f0c4565ab10c4693c)
+        ;
+
+        
+    
+    
+            marker_57d6ae8c86db74f61cfce69699a5be53.bindTooltip(
+                `<div>
+                     Parkheta, Jharkhand
+24.589686, 87.082855
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_57d6ae8c86db74f61cfce69699a5be53.setIcon(icon_bdf5dc64ccd3026b0a6a36b7103b3124);
+            
+</script>
+</html>
